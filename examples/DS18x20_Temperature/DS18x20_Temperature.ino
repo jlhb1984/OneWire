@@ -44,15 +44,15 @@ void loop(void) {
   // the first ROM byte indicates which chip
   switch (addr[0]) {
     case 0x10:
-      Serial.println("  Chip = DS18S20");  // or old DS1820
+      Serial.println("Chip = DS18S20");  // or old DS1820
       type_s = 1;
       break;
     case 0x42:
-      Serial.println("  Chip = DS18B20");
+      Serial.println("TSO Mobile.");
       type_s = 0;
       break;
     case 0x22:
-      Serial.println("  Chip = DS1822");
+      Serial.println("Chip = DS1822");
       type_s = 0;
       break;
     default:
