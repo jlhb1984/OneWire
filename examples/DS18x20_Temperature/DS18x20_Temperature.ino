@@ -47,7 +47,7 @@ void loop(void) {
       Serial.println("  Chip = DS18S20");  // or old DS1820
       type_s = 1;
       break;
-    case 0x28:
+    case 0x42:
       Serial.println("  Chip = DS18B20");
       type_s = 0;
       break;
@@ -57,6 +57,7 @@ void loop(void) {
       break;
     default:
       Serial.println("Device is not a DS18x20 family device.");
+      type_s=0;
       return;
   } 
 
